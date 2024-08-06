@@ -11,10 +11,18 @@ class AlasanBanned extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-      backgroundColor: Color(0xff4C34E2),
-      leading: Icon(
-        Icons.arrow_back, 
-          color: Colors.white,),
+      backgroundColor: const Color( 0xff4C34E2),
+      leading: Padding(
+        padding: const EdgeInsets.only(left: 5.0),
+        child: GestureDetector(
+          onTap: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=> const TakedownCurhatan()));
+          },
+          child: const Icon(
+            Icons.arrow_back, 
+              color: Colors.white,),
+        ),
+      ),
       ),
 
       body:SafeArea(
@@ -25,10 +33,10 @@ class AlasanBanned extends StatelessWidget {
                 clipBehavior: Clip.none,
                 children: [
                   Container(
-                    padding: EdgeInsets.only(left: 30),
+                    padding: const EdgeInsets.only(left: 30),
                     width: MediaQuery.of(context).size.width,
                     height: 170.h,
-                    color:  Color(0xff4C34E2),
+                    color:  const Color(0xff4C34E2),
                     child: Padding(
                       padding: const EdgeInsets.only(top: 5.0),
                       child: Column(
@@ -74,7 +82,7 @@ class AlasanBanned extends StatelessWidget {
                               color: Colors.black.withOpacity(0.2),
                               spreadRadius: 4, 
                               blurRadius: 4,
-                              offset: Offset(0, 3),
+                              offset: const Offset(0, 3),
                             ),
                           ]
                         ),
@@ -89,7 +97,7 @@ class AlasanBanned extends StatelessWidget {
                               fontSize: 20.sp
                             ),
                             border: InputBorder.none,
-                            contentPadding: EdgeInsets.symmetric(horizontal: 25, vertical: 25)
+                            contentPadding: const EdgeInsets.symmetric(horizontal: 25, vertical: 25)
                           ),
                         
                           maxLines: 30,
@@ -101,25 +109,25 @@ class AlasanBanned extends StatelessWidget {
               ),
           
               Padding(
-                padding: EdgeInsets.only(top: 430.h),
+                padding: EdgeInsets.only(top: 420.h),
                 child: Column(
                   children: [
                     SizedBox(
-                      width: 385.w,
-                      height: 53.h,
+                      width: 360.w,
+                      height: 50.h,
                       child: ElevatedButton(
                         style: ButtonStyle(
-                          backgroundColor: WidgetStateProperty.all<Color>(Color(0xff4C34E2)), // Warna latar belakang
+                          backgroundColor: WidgetStateProperty.all<Color>(const Color(0xff4C34E2)), // Warna latar belakang
                         foregroundColor: WidgetStateProperty.all<Color>(Colors.white), // Warna teks
                         ),
                         onPressed: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=> BerhasilBanding()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=> const BerhasilBanding()));
                         }, 
                         child: 
                           Text("Kirim Banding",
                         style: TextStyle(
                           fontFamily: "Segoe Bold",
-                          fontSize: 20.sp
+                          fontSize: 18.sp
                         ),
                         )
                       ),
@@ -128,26 +136,26 @@ class AlasanBanned extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(top: 8.0, bottom: 10),
                       child: SizedBox(
-                        width: 385.w,
-                        height: 53.h,
+                        width: 360.w,
+                        height: 50.h,
                         child: ElevatedButton(
                           style: ButtonStyle(
-                          foregroundColor: WidgetStateProperty.all<Color>(Color(0xff4C34E2)), // Warna latar belakang
+                          foregroundColor: WidgetStateProperty.all<Color>(const Color(0xff4C34E2)), // Warna latar belakang
                           backgroundColor: WidgetStateProperty.all<Color>(Colors.white), // Warna teks
                           shape: WidgetStateProperty.all(RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(25),
-                            side: BorderSide(
+                            side: const BorderSide(
                               color: Color(0xff4C34E2)
                             )
                           ))
                         ),
                           onPressed: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=> TakedownCurhatan()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=> const TakedownCurhatan()));
                           }, child: 
                           Text("Kembali",
                           style: TextStyle(
                           fontFamily: "Segoe Bold",
-                          fontSize: 20.sp
+                          fontSize: 18.sp
                         ),
                           )
                         ),

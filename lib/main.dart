@@ -1,7 +1,5 @@
-//import 'package:banned_akun/alasan_banned.dart';
-//import 'package:banned_akun/berhasil_banding.dart';
+import 'package:banned_akun/info_takedown.dart';
 import 'package:banned_akun/landing_page.dart';
-//import 'package:banned_akun/takedown_curhatan.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -16,12 +14,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: Size(398, 806),
+      designSize:const  Size(398, 806),
       builder: (_, child) {
-        return MaterialApp(
+        return const MaterialApp(
           debugShowCheckedModeBanner: false,
        
-        home: LandingPage(),
+        home: InfoTakedown(keadaan: true,),
         );
       }
     );

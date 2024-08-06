@@ -21,17 +21,18 @@ class InfoTakedown extends StatelessWidget {
             children: [
               GestureDetector(
                 onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> LandingPage()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const LandingPage()));
                 },
                 child: const Icon(Icons.arrow_back_ios)),
-                 Padding(
-                   padding: const EdgeInsets.only(left: 8.0),
+                 const Padding(
+                   padding: EdgeInsets.only(left: 8.0),
                    child: Text(
                     "Kembali", 
                     style: TextStyle(
                     fontFamily: "Inter Bold",
-                               ),),
-                 ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
@@ -40,7 +41,7 @@ class InfoTakedown extends StatelessWidget {
       body: SingleChildScrollView(
         child: Center(
           child: Padding(
-            padding: const EdgeInsets.only(top: 30.0),
+            padding: const EdgeInsets.only(top: 40.0),
             child: Column(
               children: [
                 Text(
@@ -50,7 +51,7 @@ class InfoTakedown extends StatelessWidget {
                   style: TextStyle(
                     fontFamily: "Segoe Bold",
                     fontSize: 26.sp,
-                    color: Color(0xff4C34E2)
+                    color: const Color(0xff4C34E2)
                   ),
                 ),
             
@@ -62,11 +63,11 @@ class InfoTakedown extends StatelessWidget {
                        keadaan 
                       ? "terkait postingan yang dihapus \n“Aku ingin curhat”...." 
                       : "Kami telah meninjau postingan kamu dan menghapusnya karena melanggar pedoman komunitas tentang kata-kata kotor dan kekerasan", 
+                      textAlign: TextAlign.center,
                       style: TextStyle(
                         fontFamily: "Segoe",
-                        fontSize: 19.sp,
+                        fontSize: 18.sp,
                       ),
-                      textAlign: TextAlign.center,
                     ),
                   ),
                 ),
@@ -75,10 +76,10 @@ class InfoTakedown extends StatelessWidget {
                   alignment: Alignment.center,
                   children:[ Image(image: 
                   keadaan
-                    ? AssetImage("assets/terima.png", )
-                    : AssetImage("assets/tolak.png"),
-                    width: 298.w,
-                    height: 298.h,
+                    ? const AssetImage("assets/terima.png")
+                    : const AssetImage("assets/tolak.png"),
+                    width: 260.w,
+                    height: 260.h,
                     ),
             
                     Positioned(
@@ -93,7 +94,7 @@ class InfoTakedown extends StatelessWidget {
                           style: TextStyle(
                             fontSize: 26.sp,
                             fontFamily: "Inter Bold",
-                            color: Color(0xff7591FF),
+                            color: const Color(0xff7591FF),
                           ),
                         ),
                       ),
@@ -102,39 +103,39 @@ class InfoTakedown extends StatelessWidget {
                 ), 
             
                 Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 30.0),
+                  padding: const EdgeInsets.symmetric(vertical: 25.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       SizedBox(
-                        width: 320.w,
+                        width: 340.w,
                         child: Text(
                           keadaan 
                             ? "Mohon maaf atas kesalahan penghapusan postingan kamu.."
                             : "Postingan kamu terdeteksi melanggar pedoman komunitas",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              fontSize: 25.sp,
+                              fontSize: 26.sp,
                               fontFamily: "Segoe Bold", 
-                              color: Color(0xff4C34E2)
-                            ),
+                              color: const Color(0xff4C34E2),
+                          ),
                         ),
                       ),
                             
                       Container(
-                        padding: EdgeInsets.only(top: 10, bottom: 20),
-                        width: 370.w,
+                        padding: const EdgeInsets.only(top: 10, bottom: 20),
+                        width: 365.w,
                         child: Text(
                           keadaan
                             ? "Postingan kamu kini telah ditampilkan kembali. Terima kasih atas pengajuan banding yang dilakukan"
                             : "Terima kasih telah mengajukan peninjauan. Kami tidak dapat mengembalikan postingan kamu", 
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              fontSize: 19.sp,
+                              fontSize: 18.sp,
                               fontFamily: "Segoe",
-                              color: Color(0xff484848)
-                            ),
+                              color: const Color(0xff484848)
+                          ),
                         ),
                       )
                     ],
@@ -142,30 +143,27 @@ class InfoTakedown extends StatelessWidget {
                 ),
             
                 SizedBox(
-                  width: 385.w,
-                  height: 53.h,
+                  width: 360.w,
+                  height: 50.h,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Color(0xff4C34E2),
+                      backgroundColor: const Color(0xff4C34E2),
                       foregroundColor: Colors.white
                     ),
+
                     onPressed: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=> LandingPage()));
-        
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=> const LandingPage()));
                     }, 
+
                     child: Text(
                       "Kembali", 
                       style: TextStyle(
                         fontFamily: "Inter Bold", 
-                        fontSize: 20.sp
+                        fontSize: 18.sp
                       ),
-                    
                     )
                   ),
                 )
-            
-            
-            
               ],
             ),
           ),

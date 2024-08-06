@@ -74,6 +74,8 @@ class AlasanBanned extends StatelessWidget {
                     right: 37.w,
                     child: 
                       Container(
+                        width: 356.w,
+                        height: 450,
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(28),
@@ -86,23 +88,20 @@ class AlasanBanned extends StatelessWidget {
                             ),
                           ]
                         ),
-                        width: 356.w,
-                        height: 450,
                         
                         child: TextField(
+                          maxLines: 30,
+                          
                           decoration: InputDecoration(
+                            border: InputBorder.none,
+                            contentPadding: const EdgeInsets.symmetric(horizontal: 25, vertical: 25),
                             hintText: "Alasan......",
                             hintStyle: TextStyle(
                               fontFamily: "Segoe Italic", 
                               fontSize: 20.sp
-                            ),
-                            border: InputBorder.none,
-                            contentPadding: const EdgeInsets.symmetric(horizontal: 25, vertical: 25)
                           ),
-                        
-                          maxLines: 30,
-                          
                         ),
+                      ),
                     ),
                   ),
                 ],
@@ -123,12 +122,12 @@ class AlasanBanned extends StatelessWidget {
                         onPressed: (){
                           Navigator.push(context, MaterialPageRoute(builder: (context)=> const BerhasilBanding()));
                         }, 
-                        child: 
-                          Text("Kirim Banding",
-                        style: TextStyle(
-                          fontFamily: "Segoe Bold",
-                          fontSize: 18.sp
-                        ),
+                        child: Text(
+                          "Kirim Banding",
+                            style: TextStyle(
+                              fontFamily: "Segoe Bold",
+                              fontSize: 18.sp
+                          ),
                         )
                       ),
                     ),
@@ -146,17 +145,18 @@ class AlasanBanned extends StatelessWidget {
                             borderRadius: BorderRadius.circular(25),
                             side: const BorderSide(
                               color: Color(0xff4C34E2)
-                            )
-                          ))
+                              ),
+                            ),
+                          ),
                         ),
                           onPressed: (){
                             Navigator.push(context, MaterialPageRoute(builder: (context)=> const TakedownCurhatan()));
-                          }, child: 
-                          Text("Kembali",
-                          style: TextStyle(
-                          fontFamily: "Segoe Bold",
-                          fontSize: 18.sp
-                        ),
+                          }, child: Text(
+                            "Kembali",
+                              style: TextStyle(
+                                fontFamily: "Segoe Bold",
+                                fontSize: 18.sp
+                            ),
                           )
                         ),
                       ),

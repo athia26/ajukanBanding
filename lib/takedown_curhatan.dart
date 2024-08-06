@@ -35,13 +35,14 @@ class TakedownCurhatan extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 20.sp,
                       fontFamily: "Inter Bold",
-                      ),
-                    ),
-                 ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
       ),
+
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -53,7 +54,8 @@ class TakedownCurhatan extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 28.sp,
                   fontFamily: "Segoe Bold"
-                ),),
+                ),
+              ),
             ), 
         
             Stack(
@@ -62,12 +64,9 @@ class TakedownCurhatan extends StatelessWidget {
               children: [
                 Positioned(
                   child: Image.asset(
-                    'assets/bg.png',
-                    // width:400.w,
-                    // height: 400.h,
+                    'assets/bg.png'
                     ),
-                    
-                    ),
+                  ),
 
                 Positioned(
                   top: 50,
@@ -101,7 +100,8 @@ class TakedownCurhatan extends StatelessWidget {
                               spreadRadius: 3, 
                               blurRadius: 6,
                               offset: Offset(4, 5),
-                    )]
+                      )
+                    ]
                   ),
                   child:  Padding(
                     padding: const EdgeInsets.only(left: 8.0, right: 8.0, top: 15, bottom: 15),
@@ -143,8 +143,6 @@ class TakedownCurhatan extends StatelessWidget {
                     height: 57.h,
                   ),
                 ),
-            
-                
               ],
             ),
         
@@ -195,15 +193,17 @@ class TakedownCurhatan extends StatelessWidget {
                   child: ElevatedButton(
                     style: ButtonStyle(
                       backgroundColor: WidgetStateProperty.all<Color>(const Color(0xff4C34E2)), // Warna latar belakang
-                    foregroundColor: WidgetStateProperty.all<Color>(Colors.white), // Warna teks
+                      foregroundColor: WidgetStateProperty.all<Color>(Colors.white), // Warna teks
                     ),
+                    
                     onPressed: (){
                       Navigator.push(context, MaterialPageRoute(builder: (context)=> const AlasanBanned()));
-                    }, child: 
-                    Text("Ajukan Banding",
-                    style: TextStyle(
-                      fontFamily: "Inter Bold",
-                      fontSize: 18.sp,
+                    }, 
+                    child: Text(
+                      "Ajukan Banding",
+                        style: TextStyle(
+                          fontFamily: "Inter Bold",
+                          fontSize: 18.sp,
                       ),
                     ),
                   ),
@@ -226,13 +226,15 @@ class TakedownCurhatan extends StatelessWidget {
                         ),
                       ),
                     ),
+                      
                       onPressed: (){
                         Navigator.push(context, MaterialPageRoute(builder: (context)=> const LandingPage()));
-                      }, child: 
-                      Text("Kembali",
-                        style: TextStyle(
-                      fontFamily: "Inter Bold",
-                      fontSize: 18.sp,
+                      }, 
+                      child: Text(
+                        "Kembali",
+                          style: TextStyle(
+                            fontFamily: "Inter Bold",
+                            fontSize: 18.sp,
                           ),
                         ),
                       ),

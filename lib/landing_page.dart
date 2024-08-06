@@ -8,7 +8,7 @@ class LandingPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Container(
+    return Container(
       color: Colors.white,
       child: Center(
         child: Column(
@@ -20,22 +20,22 @@ class LandingPage extends StatelessWidget {
               Navigator.push(context, MaterialPageRoute(builder: (context) => const TakedownCurhatan()));
               }, 
             
-            child: const Text(
-              "Take Down Curhatan"
-            )),
+              child: const Text(
+                "Take Down Curhatan"
+              ),
+            ),
       
             ElevatedButton(
-          onPressed: (){
-          Navigator.push(context, MaterialPageRoute(builder: (context) => const InfoTakedown(keadaan: false)));
-          }, 
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const InfoTakedown(keadaan: false)));
+              }, 
         
-        child: const Text(
-          "Info Take Down"
-        )),
+              child: const Text(
+                "Info Take Down"
+              )
+            ),
           ],
         ),
-      
-        
       ),
     );
   }
